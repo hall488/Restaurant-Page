@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require("webpack");
 
 module.exports = {
-    mode: 'development',
     entry: {
         app: './src/index.js',
         // Runtime code for hot module replacement
@@ -11,13 +10,7 @@ module.exports = {
         // Dev server client for web socket transport, hot and live reload logic
         client: 'webpack-dev-server/client/index.js?hot=true&live-reload=true',
     },
-    devtool: 'inline-source-map',
-    devServer: {
-        static: './dist',
-        // Dev server client for web socket transport, hot and live reload logic
-        hot: false,
-        client: false,
-    },
+    
     module: {
         rules: [
           {
@@ -28,7 +21,7 @@ module.exports = {
       },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Development',
+            title: 'Production',
         }),
         // Plugin for hot module replacement
         new webpack.HotModuleReplacementPlugin(),
