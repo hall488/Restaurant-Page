@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --color1: rgb(56,56,56);
+    --color2: whitesmoke;
+    --color3: rgb(34, 34, 34);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    box-sizing: border-box;
+    background-color: var(--color1);
+    flex: 0 1 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 10px;
+    color: var(--color2);
+}
+
+.header > .title {
+    font-size: 32px;
+    margin-right: auto;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+  transition: transform .5s ease-in-out;
+}
+
+.profile, .menu {
+    flex: 0 0 25px;
+    display: flex;
+    padding: 10px 9.5px;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    padding: 10px 9.5px;
+}
+.profile:hover, .menu:hover{
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.header > .apps {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    top: 64px;
+    right: 0px;
+    margin: 10px;
+    background-color: var(--color3);
+    box-shadow: 0px 0px 10px black;
+    border-radius: 20px;
+    border: 10px solid var(--color1);
+}
+
+.app {
+    aspect-ratio: 1;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column-reverse;
+    gap: 8px;
+    padding: 8px;
+}
+
+.app > .svg-inline--fa {
+    font-size: 20px;
+}
+
+.app:hover {
+    border-radius: 20%;
+    background-color: grey;
+}
+
+.main-page {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filler {
+    box-sizing: border-box;
+    border: 10px solid var(--color1);
+    border-radius: 10px;
+    width: max(50%, 250px);
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.instructions {
+    flex: 0;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.openmat {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    grid-auto-rows: min-content;
+    margin: 0;
+    padding: 0;
+    gap: 32px;
+    align-items: start;
+    justify-content: center;
+    padding: 32px;
+    flex: 1;
+}
+
+.mat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 5px solid var(--color3);
+    background-color: var(--color1);
+    color: var(--color2);
+    gap: 16px;
+    padding: 16px;
+}
+
+.mat-container > .icon{
+    font-size: 36px;
+    
+}
+
+.mat-btn {
+    padding: 8px 16px;
+}
+
+.mat-container > .mat-btn:hover {
+    border-radius: 10px;
+    
+    background-color: grey;
+}
+
+.page {
+    flex: 1;
+}
+
+line {
+    stroke: var(--color1);
+}
+
+circle {
+    stroke: var(--color3);
+    stroke-width: 5px;
+    fill: var(--color3);
+}
+
+.node {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color1);
+}
+
+.footer {
+    order: 3;
+    color: var(--color2);
+    background-color: var(--color1);
+    box-sizing: border-box;
+    flex: 0 1 auto;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.fa-github {
+    color: var(--color2);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
